@@ -1,10 +1,17 @@
-.App {
-  text-align: center;
+input[type='file']::file-selector-button {
+  border: 1px solid #00cec9;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: transparent;
+  transition: 1s;
+  color: #fff;
+  margin-right: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type='file']::file-selector-button:hover {
+  background-color: transparent;
+  border: 1px solid rgb(123, 206, 123);
+  transition: 1s;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,26 +20,21 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.gelatine {
+  animation: gelatine 0.5s;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+@keyframes gelatine {
+  from,
   to {
-    transform: rotate(360deg);
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
   }
 }
